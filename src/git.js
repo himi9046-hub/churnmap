@@ -29,7 +29,6 @@ export function readLog({ cwd, since, path }) {
   return parseLog(git(args, cwd));
 }
 
-// Input is `git log` with a NUL-prefixed header per commit, followed by numstat lines.
 export function parseLog(raw) {
   const commits = [];
   for (const chunk of raw.split('\0')) {

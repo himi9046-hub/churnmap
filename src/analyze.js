@@ -15,9 +15,6 @@ export function countLines(file) {
   return buf[buf.length - 1] === 10 ? n : n + 1;
 }
 
-// A hotspot is a file that is both large and frequently changed. Neither alone is
-// interesting: a 3000-line file nobody touches is fine, so is a config file edited daily.
-// score = commits * sqrt(lines), scaled so the worst file is 100.
 export function hotspots(commits, { root, skip = () => false, lines = (p) => countLines(join(root, p)) }) {
   const stats = new Map();
 
@@ -72,8 +69,6 @@ export function hotspots(commits, { root, skip = () => false, lines = (p) => cou
   return rows;
 }
 
-// Temporal coupling: pairs of files that keep showing up in the same commits.
-// Huge commits (reformatting, renames, vendoring) say nothing about design, so they're ignored.
 export function coupling(commits, { keep = () => true, minShared = 5, maxFiles = 30 } = {}) {
   const seen = new Map();
   const pairs = new Map();

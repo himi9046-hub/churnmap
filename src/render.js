@@ -45,7 +45,6 @@ export function renderHotspots(rows, { style, columns = 100, now = Date.now() / 
   ]);
   const widths = heads.map((h, c) => Math.max(h.length, ...cells.map((row) => row[c].length)));
 
-  // the score column carries its bar in front of the number
   widths[1] = 3;
   const scoreWidth = BAR + 1 + widths[1];
   const fixed = 2 + widths.reduce((sum, w) => sum + w + 2, 0) + BAR + 1;

@@ -15,8 +15,6 @@ export const DEFAULT_EXCLUDES = [
   '*.snap',
 ];
 
-// Gitignore-flavoured: a pattern without a slash matches the basename at any depth,
-// a trailing slash matches everything under that directory.
 export function globToRegExp(glob) {
   let pattern = glob.replace(/\\/g, '/');
   const dirOnly = pattern.endsWith('/');
