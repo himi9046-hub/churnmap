@@ -102,7 +102,7 @@ npm install -g churnmap
 Or run it straight from a checkout:
 
 ```
-git clone https://github.com/<you>/churnmap
+git clone https://github.com/himi9046-hub/churnmap
 node churnmap/bin/churnmap.js -C path/to/repo
 ```
 

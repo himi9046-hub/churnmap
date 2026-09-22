@@ -24,5 +24,11 @@
     "refactoring",
     "cli"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himi9046-hub/churnmap.git"
+  },
+  "homepage": "https://github.com/himi9046-hub/churnmap#readme",
+  "author": "himi"
 }
