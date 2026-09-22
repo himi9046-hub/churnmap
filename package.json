@@ -1,0 +1,28 @@
+{
+  "name": "churnmap",
+  "version": "0.1.0",
+  "description": "Find the files in a git repo that change too often and are too big. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "churnmap": "bin/churnmap.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "git",
+    "hotspots",
+    "churn",
+    "code-quality",
+    "refactoring",
+    "cli"
+  ],
+  "license": "MIT"
+}
