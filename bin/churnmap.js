@@ -7,6 +7,8 @@ import { DEFAULT_EXCLUDES, makeMatcher } from '../src/glob.js';
 import { hotspots, coupling } from '../src/analyze.js';
 import { makeStyle, renderHotspots, renderCoupling } from '../src/render.js';
 
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+
 function main(argv) {
   const opts = parseArgs(argv);
 
@@ -62,7 +64,7 @@ function main(argv) {
   text +=
     '\n' +
     style.dim(
-      `  ${commits.length} commits, ${all.length} files${scope ? ` (${scope})` : ''}. ` +
+      `  ${plural(commits.length, 'commit')}, ${plural(all.length, 'file')}${scope ? ` (${scope})` : ''}. ` +
         'score = commits x sqrt(lines), 100 is the worst file.',
     ) +
     '\n\n';
