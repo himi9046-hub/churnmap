@@ -3,10 +3,13 @@
 Every codebase has a handful of files that eat most of the team's time. They're
 big, everybody touches them, and they're where the bugs and merge conflicts keep
 coming from. `churnmap` reads your git history and tells you which ones they are.
+I wrote it to find out which files in my own repos I should split up first.
 
 ```
-npx churnmap
+npx github:himi9046-hub/churnmap
 ```
+
+On a small demo repo it prints:
 
 ```
   #           score  commits  lines  authors  owner   last  file
@@ -95,8 +98,10 @@ is set.
 
 ## Install
 
+It is not on npm. Install it from GitHub:
+
 ```
-npm install -g churnmap
+npm install -g github:himi9046-hub/churnmap
 ```
 
 Or run it straight from a checkout:
